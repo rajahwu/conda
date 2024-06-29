@@ -1,0 +1,41 @@
+### Directory Listing ###
+total 12
+drwxr-xr-x 2 rajahwu rajahwu 4096 Jun 29 03:33 console
+drwxr-xr-x 3 rajahwu rajahwu 4096 Jun 29 00:55 content
+-rw-r--r-- 1 rajahwu rajahwu    0 Jun 29 03:33 index.html
+-rw-r--r-- 1 rajahwu rajahwu    0 Jun 29 03:29 pulseaudio.txt
+-rw-r--r-- 1 rajahwu rajahwu    0 Jun 29 03:34 readme.md
+drwxr-xr-x 4 rajahwu rajahwu 4096 Jun 29 04:04 scripts
+### Project Tree ###
+.
+├── console
+├── content
+│   ├── isaac.py
+│   ├── pyref
+│   │   ├── mpt
+│   │   │   ├── ch02
+│   │   │   └── ch03
+│   │   └── readme.md
+│   ├── sr.py
+│   └── text.txt
+├── index.html
+├── pulseaudio.txt
+├── readme.md
+└── scripts
+    ├── fetch_html.sh
+    ├── list_devices.sh
+    ├── log_info.sh
+    ├── logs
+    │   ├── info_20240629_041111.txt
+    │   └── info_20240629_041257.txt
+    └── python
+        └── list_devices.py
+
+9 directories, 13 files
+### Conda Environments ###
+# conda environments:
+#
+                         /home/rajahwu/anaconda3
+                         /home/rajahwu/miniconda3
+base                  *  /home/rajahwu/miniconda3/envs/pyspeak
+
