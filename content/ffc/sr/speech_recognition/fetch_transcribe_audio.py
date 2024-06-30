@@ -9,9 +9,12 @@ from dotenv import load_dotenv
 env_path = '/var/www/html/apps/Training/conda/.env'
 load_dotenv(env_path)
 
+projectUrl = "/var/www/html/apps/Training/conda/"
+ffcsrAssetsUrl = "content/ffc/sr/assets/"
+
 uploadUrl = 'https://api.assemblyai.com/v2/upload'
 transcriptUrl = 'https://api.assemblyai.com/v2/transcript'
-filename = "/var/www/html/apps/Training/conda/content/ffc/sr/assets/audio/vincent.wav"
+filename = projectUrl +  ffcsrAssetsUrl + "audio/vincent.wav"
 
 headers = {
     "authorization": os.environ.get("API_KEY_ASSEMBLYAI"),
@@ -41,9 +44,7 @@ def upload(filename):
 audioUrl = upload(filename)
 
 def transcribe(audio_url):
-    
     transcriptRequest = {"audio_url": audio_url}
-    
     transcriptResponse = requests.post(
         transcriptUrl,
         json=transcriptRequest,
@@ -86,4 +87,4 @@ def saveTranscript(url, title):
     elif error:
         print("Error!!!", error)
 
-saveTranscript(audioUrl, "/var/www/html/apps/Training/conda/content/ffc/sr/speech_recognition/fetch_result_sample_short")
+saveTranscript(audioUrl, projectUrl + "content/ffc/sr/speech_recognition/fetch_result_sample_short")
