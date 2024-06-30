@@ -1,13 +1,14 @@
+import { Link } from 'react-router-dom';
+import Dashboard from "../components/Dashboard";
+
 export default function Root() {
     return (
-        <>
-            <div id="sidbar">
+        <div className="app-container">
+            <div id="sidebar">
                 <h1>Webapp</h1>
                 <p>Webapp is a web application that is written in TypeScript and uses React.</p>
-                <div>
-
+                <div className="search-container">
                     <form id="search-form" role="search">
-                        <label htmlFor="search">Search</label>
                         <input
                             id="q"
                             aria-label="Search"
@@ -15,28 +16,20 @@ export default function Root() {
                             type="search"
                             name="q"
                         />
-                        <div
-                            id="search-spinner"
-                            aria-hidden
-                            hidden={true}
-                        />
-                        <div
-                            className="sr-only"
-                            aria-live="polite"
-                        ></div>
-                    </form>
-                    <form method="post">
                         <button type="submit">Search</button>
                     </form>
                 </div>
                 <nav>
                     <ul>
-                        <li><a href="/apps/Training/conda/webapp/dist">Home</a></li>
-                        <li><a href="/apps/Training/conda/webapp/dist/about">About</a></li>
+                        <li><a href="/apps/Training/conda/">Home</a></li>
+                        <li><Link to="/apps/Training/conda/webapp/dist/about/">About</Link></li>
                     </ul>
                 </nav>
             </div>
-            <div id="details"></div>
-        </>
+
+            <div id="dashboard-container">
+                <Dashboard />
+            </div>
+        </div>
     )
 }
