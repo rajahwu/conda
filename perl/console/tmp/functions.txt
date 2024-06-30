@@ -1,0 +1,271 @@
+[0;36m#### check_apache2.sh ####[0m
+#!/bin/bash
+source ./console/colors.sh
+
+check_apache2() {
+  if sudo service apache2 status > /dev/null; then
+    echo -e "${GREEN}Apache2 is running.${NC}"
+    return 0
+  else
+    echo -e "${YELLOW}Apache2 is not running.${NC}"
+    return 1
+  fi
+}
+
+[0;36m#### check_hostname.sh ####[0m
+# #!/bin/bash
+source ./console/colors.sh
+
+check_hostname() {
+  local hostname_ip
+  hostname_ip=$(hostname -I | xargs)
+  local hostname_ip_status=$?
+  if [[ ${hostname_ip_status} -ne 0 ]] || [[ -z "${hostname_ip}" ]]; then
+    echo -e "${RED}Failed to retrieve hostname IP.${NC}"
+    exit 1
+  fi
+  
+  echo -e "${CYAN}Hostname IP: ${hostname_ip}${NC}"
+  local url="http://${hostname_ip}"
+  echo -e -n "${CYAN}Curling URL: ${url} - Status Code: ${NC}"
+  curl -o /dev/null -s -w "%{http_code}\n" "${url}"
+
+  local url_public="http://${hostname_ip}/public"
+  echo -e -n "${CYAN}Curling URL: ${url_public} - Status Code: ${NC}"
+  curl -o /dev/null -s -w "%{http_code}\n" "${url_public}"
+
+  return 0
+}
+
+[0;36m#### check_node_version.sh ####[0m
+#!/bin/bash
+source ./console/colors.sh
+
+check_node_version() {
+  local required_version=18
+  local node_version_output
+  node_version_output=$(node -v)
+  local node_version_status=$?
+  if [[ ${node_version_status} -ne 0 ]]; then
+    echo -e "${RED}Node is not installed.${NC}"
+    return 1
+  fi
+  local current_version
+  current_version=$(echo "${node_version_output}" | grep -o '[0-9]*' | head -1)
+  
+  if [[ -z "${current_version}" ]] || [[ "${current_version}" -lt "${required_version}" ]]; then
+    echo -e "${YELLOW}Node version is less than 18 or not installed.${NC}"
+    return 1
+  fi
+  
+  echo -e "${GREEN}Node version is ${current_version}, which is 18 or higher.${NC}"
+  return 0
+}
+
+
+[0;36m#### check_php_fpm.sh ####[0m
+#!/bin/bash
+source ./console/colors.sh
+
+check_php_fpm() {
+  if sudo service php8.2-fpm status > /dev/null; then
+    echo -e "${GREEN}PHP 8.2-FPM is running.${NC}"
+    return 0
+  else
+    echo -e "${YELLOW}PHP 8.2-FPM is not running.${NC}"
+    return 1
+  fi
+}
+
+
+[0;36m#### check_postgresql.sh ####[0m
+#!/bin/bash
+source ./console/colors.sh
+
+check_postgresql() {
+  if sudo service postgresql status > /dev/null; then
+    echo -e "${GREEN}PostgreSQL is running.${NC}"
+    return 0
+  else
+    echo -e "${YELLOW}PostgreSQL is not running.${NC}"
+    return 1
+  fi
+}
+
+
+[0;36m#### restart_apache2.sh ####[0m
+#!/bin/bash
+source ./console/colors.sh
+
+# Function to restart apache2
+restart_apache2() {
+  echo -e "${YELLOW}Restarting Apache2...${NC}"
+  sudo service apache2 restart
+  if ! sudo service apache2 status > /dev/null; then
+    echo -e "${RED}Failed to restart Apache2.${NC}"
+    exit 1
+  fi
+  echo -e "${GREEN}Apache2 restarted.${NC}"
+}
+
+
+[0;36m#### restart_php_fpm.sh ####[0m
+#!/bin/bash
+source ./console/colors.sh
+
+# Function to restart php8.2-fpm
+restart_php_fpm() {
+  echo -e "${YELLOW}Restarting PHP 8.2-FPM...${NC}"
+  sudo service php8.2-fpm restart
+  if ! sudo service php8.2-fpm status > /dev/null; then
+    echo -e "${RED}Failed to restart PHP 8.2-FPM.${NC}"
+    exit 1
+  fi
+  echo -e "${GREEN}PHP 8.2-FPM restarted.${NC}"
+}
+
+
+[0;36m#### restart_postgresql.sh ####[0m
+#!/bin/bash
+source ./console/colors.sh
+
+# Function to restart postgresql
+restart_postgresql() {
+  echo -e "${YELLOW}Restarting PostgreSQL...${NC}"
+  sudo service postgresql restart
+  if ! sudo service postgresql status > /dev/null; then
+    echo -e "${RED}Failed to restart PostgreSQL.${NC}"
+    exit 1
+  fi
+  echo -e "${GREEN}PostgreSQL restarted.${NC}"
+}
+
+
+[0;36m#### start_apache2.sh ####[0m
+#!/bin/bash
+source ./console/colors.sh
+
+start_apache2() {
+  echo -e "${YELLOW}Starting Apache2...${NC}"
+  sudo service apache2 start
+  if sudo service apache2 status > /dev/null; then
+    echo -e "${GREEN}Apache2 started successfully.${NC}"
+    return 0
+  else
+    echo -e "${RED}Failed to start Apache2.${NC}"
+    return 1
+  fi
+}
+
+[0;36m#### start_node_version.sh ####[0m
+#!/bin/bash
+source ./console/colors.sh
+
+start_node_version() {
+  local required_version=18
+  echo -e "${YELLOW}Using nvm to switch to node 18...${NC}"
+  nvm use 18
+  local nvm_use_status=$?
+  if [[ ${nvm_use_status} -ne 0 ]]; then
+    echo -e "${RED}Failed to switch to Node 18. Please install Node 18 or higher using nvm.${NC}"
+    return 1
+  fi
+  local node_version_output=$(node -v)
+  local current_version=$(echo "${node_version_output}" | grep -o '[0-9]*' | head -1)
+  if [[ "${current_version}" -lt "${required_version}" ]]; then
+    echo -e "${RED}Failed to switch to Node 18. Please install Node 18 or higher using nvm.${NC}"
+    return 1
+  fi
+  
+  echo -e "${GREEN}Node version is ${current_version}, which is 18 or higher.${NC}"
+  return 0
+}
+
+[0;36m#### start_php_fpm.sh ####[0m
+#!/bin/bash
+source ./console/colors.sh
+
+start_php_fpm() {
+  echo -e "${YELLOW}Starting PHP 8.2-FPM...${NC}"
+  sudo service php8.2-fpm start
+  if sudo service php8.2-fpm status > /dev/null; then
+    echo -e "${GREEN}PHP 8.2-FPM started successfully.${NC}"
+    return 0
+  else
+    echo -e "${RED}Failed to start PHP 8.2-FPM.${NC}"
+    return 1
+  fi
+}
+
+
+[0;36m#### start_postgresql.sh ####[0m
+#!/bin/bash
+source ./console/colors.sh
+
+start_postgresql() {
+  echo -e "${YELLOW}Starting PostgreSQL...${NC}"
+  sudo service postgresql start
+  if sudo service postgresql status > /dev/null; then
+    echo -e "${GREEN}PostgreSQL started successfully.${NC}"
+    return 0
+  else
+    echo -e "${RED}Failed to start PostgreSQL.${NC}"
+    return 1
+  fi
+}
+
+
+[0;36m#### stop_apache2.sh ####[0m
+#!/bin/bash
+source ./console/colors.sh
+
+# Function to stop apache2
+stop_apache2() {
+  if sudo service apache2 status > /dev/null; then
+    echo -e "${YELLOW}Stopping Apache2...${NC}"
+    sudo service apache2 stop
+    if sudo service apache2 status > /dev/null; then
+      echo -e "${RED}Failed to stop Apache2.${NC}"
+      exit 1
+    fi
+  fi
+  echo -e "${GREEN}Apache2 stopped.${NC}"
+}
+
+
+[0;36m#### stop_php_fpm.sh ####[0m
+#!/bin/bash
+source ./console/colors.sh
+
+# Function to stop php8.2-fpm
+stop_php_fpm() {
+  if sudo service php8.2-fpm status > /dev/null; then
+    echo -e "${YELLOW}Stopping PHP 8.2-FPM...${NC}"
+    sudo service php8.2-fpm stop
+    if sudo service php8.2-fpm status > /dev/null; then
+      echo -e "${RED}Failed to stop PHP 8.2-FPM.${NC}"
+      exit 1
+    fi
+  fi
+  echo -e "${GREEN}PHP 8.2-FPM stopped.${NC}"
+}
+
+
+[0;36m#### stop_postgresql.sh ####[0m
+#!/bin/bash
+source ./console/colors.sh
+
+# Function to stop postgresql
+stop_postgresql() {
+  if sudo service postgresql status > /dev/null; then
+    echo -e "${YELLOW}Stopping PostgreSQL...${NC}"
+    sudo service postgresql stop
+    if sudo service postgresql status > /dev/null; then
+      echo -e "${RED}Failed to stop PostgreSQL.${NC}"
+      exit 1
+    fi
+  fi
+  echo -e "${GREEN}PostgreSQL stopped.${NC}"
+}
+
+
