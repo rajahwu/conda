@@ -1,0 +1,8 @@
+https://freesound.org/people/GregorQuendel/sounds/744050/
+https://numpy.org/install/
+https://pypi.org/project/PyAudio/
+https://pydub.com/
+https://github.com/jiaaro/pydub#installation
+https://matplotlib.org/3.5.3/api/_as_gen/matplotlib.pyplot.html
+https://pypi.org/project/PyAudio/
+https://audacious-media-player.org/

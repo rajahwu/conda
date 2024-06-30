@@ -21,7 +21,8 @@ print("Start recordings")
 
 seconds = 5
 frames = []
-for i in range(0, int(RATE/FRAMES_PER_BUFFER+seconds)):
+# frames = [stream.read(FRAMES_PER_BUFFER) for _ in range(0, int(RATE / FRAMES_PER_BUFFER * seconds))]
+for _ in range(0, int(RATE/FRAMES_PER_BUFFER+seconds)):
     data = stream.read(FRAMES_PER_BUFFER)
     frames.append(data)
 
