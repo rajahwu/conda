@@ -1,0 +1,222 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Download &#x2013; PulseAudio</title>
+
+<link rel="stylesheet" href="../../../style.css" type="text/css" />
+<link rel="stylesheet" href="../../../xorg.css" type="text/css" />
+
+<link rel="stylesheet" href="../../../local.css" type="text/css" />
+
+
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="//secure.freedesktop.org/write/www/ikiwiki.cgi?do=edit&amp;page=Software%2FPulseAudio%2FDownload" />
+
+
+
+
+
+</head>
+<body>
+
+<div class="page">
+<div class="pageheader">
+<div class="header">
+<span class="logo"><img src="../../../logo.png" /></span>
+
+
+<form method="get" action="https://www.google.com/search" id="searchform">
+ <div>
+  <input name="sitesearch" value="https://www.freedesktop.org/wiki/" type="hidden" />
+  <input name="q" value="" id="searchbox" size="16" maxlength="255" type="text"
+    placeholder="search" />
+ </div>
+</form>
+
+
+<span class="headerpath">
+<span class="parentlinks">
+
+<a href="../../../">www</a>
+<a href="../../">Software</a>
+<a href="../">PulseAudio</a>
+
+</span>
+<span class="title">
+Download &#x2013; PulseAudio
+
+</span>
+</span>
+</div>
+
+
+<span class="actions">
+<ul>
+
+<li><a href="//secure.freedesktop.org/write/www/ikiwiki.cgi?do=edit&amp;page=Software%2FPulseAudio%2FDownload" rel="nofollow">Edit</a></li>
+
+
+
+<li><a href="https://cgit.freedesktop.org/wiki/www/log/Software/PulseAudio/Download.mdwn">Page History</a></li>
+
+
+<li><a href="https://cgit.freedesktop.org/wiki/www/">Repo Info</a></li>
+
+
+
+
+</ul>
+</span>
+</div>
+
+
+
+<div id="pagebody">
+
+<div id="content">
+<p><style>
+body { font-family: sans-serif; }
+h3 { color: maroon; text-indent: 2em; font-size: 1em; }
+code { font-size: 1em; background-color: #DDDDDD; padding: 0.25em; }
+pre { background-color: #DDDDDD; line-height: 1.5; }
+dd { padding-left: 1em; }
+</style></p>
+
+<p><img style="display: block; margin-left: auto; margin-right: auto; vertical-align:middle; padding-top:10px; padding-bottom: 15px;" width="375" height="70" title="Logo" src="https://www.freedesktop.org/software/pulseaudio/logo.png" alt="Logo"/></p>
+
+<table style="background-color:#F3F5F7; border:1pt solid #AEBDCC; width: 50%; margin: auto;">
+<tbody>
+<tr>
+<td style="font-family:sans-serif; font-weight:bold; padding: 0.4em; text-align: center;"><a href="../">Home</a>
+<td style="font-family:sans-serif; font-weight:bold; padding: 0.4em; text-align: center;"><a href="../About/">About</a>
+<td style="font-family:sans-serif; font-weight:bold; padding: 0.4em; text-align: center;"><a href="../Documentation/User/Community/">Community</a>
+<td style="font-family:sans-serif; font-weight:bold; padding: 0.4em; text-align: center;"><span class="selflink">Download</span>
+<td style="font-family:sans-serif; font-weight:bold; padding: 0.4em; text-align: center;"><a href="../Documentation/">Documentation</a>
+<td style="font-family:sans-serif; font-weight:bold; padding: 0.4em; text-align: center;"><a href="http://freedesktop.org/software/pulseaudio/planet/">Planet</a>
+</tr>
+</tbody>
+</table>
+
+<p><br clear="both"/></p>
+
+<h1 id="downloadpulseaudio">Download PulseAudio</h1>
+
+<h2 id="distribution">Distribution</h2>
+
+<p>Typically PulseAudio would be provided by your OS distribution. As PulseAudio forms part of what is typically preferred to as the <em>plumbing layer</em> of Linux userspace, it is a non-trivial job to integrate it fully to form a complete system. This is why we <strong>strongly</strong> encourage you to go via your distribution whenever possible.</p>
+
+<h2 id="sourcecode">Source Code</h2>
+
+<p>The current releases can always be found in our <a href="http://freedesktop.org/software/pulseaudio/releases/">releases directory</a>.</p>
+
+<h2 id="developmentsources">Development Sources</h2>
+
+<p>Current development sources of PulseAudio are managed with <a href="http://git-scm.com/">GIT</a> hosted here on <a href="http://www.freedesktop.org/wiki/">freedesktop.org</a>. Browse the repository <a href="http://cgit.freedesktop.org/pulseaudio/pulseaudio/">online</a> or check out the code with:</p>
+
+<pre><code>git clone git://anongit.freedesktop.org/pulseaudio/pulseaudio
+</code></pre>
+
+<p>Alternatively if you have trouble connecting (due to firewalls and such), try with the slower HTTP protocol:</p>
+
+<pre><code>git clone http://anongit.freedesktop.org/git/pulseaudio/pulseaudio.git
+</code></pre>
+
+<p><a href="../Documentation/Developer/GitBranches/">Read this explanation about the Git Branches and the release cycle</a>.</p>
+
+<h2 id="windowsbinaries">Windows Binaries</h2>
+
+<p>Windows is also supported thanks to our awesome community. For more information, see <a href="../Ports/Windows/Support/">Windows Support</a>.</p>
+
+<hr>
+
+<h1 id="dependencies">Dependencies</h1>
+
+<h2 id="builddependencies">Build Dependencies</h2>
+
+<ul>
+<li><a href="http://www.mega-nerd.com/libsndfile/">libsndfile</a> (>= 1.0.18)</li>
+<li><a href="http://www.hpl.hp.com/research/linux/atomic_ops/">libatomic_ops 1.2</a> or newer (1.1 and older do not work in all situations, and result in inline assembly compilation failures when compiling PulseAudio) Download v1.2 from <a href="http://www.hpl.hp.com/research/linux/atomic_ops/download/libatomic_ops-1.2.tar.gz">libatomic_ops-1.2.tar.gz</a></li>
+<li><a href="http://www.speex.org/downloads/">libspeexdsp</a> Required as of 0.9.11, >= 1.2rc1 as of 1.0</li>
+<li><a href="http://www.gnu.org/software/libtool/libtool.html">libtool</a> (>= 2.4)</li>
+<li><a href="https://github.com/json-c/json-c">json-c</a> (>= 0.11)</li>
+<li><a href="https://www.gnu.org/software/gettext/">gettext</a> (>= 0.18.1)</li>
+<li><a href="http://www.mega-nerd.com/SRC/">libsamplerate</a> (optional, deprecated)</li>
+<li><a href="http://x.org/">X11</a> (optional)</li>
+<li><a href="http://www.kernel.org/pub/linux/libs/security/linux-privs/libcap2">libcap</a> (optional)</li>
+<li><a href="http://alsa-project.org/">alsa-lib</a> (>= 1.0.19, optional)</li>
+<li><a href="http://gtk.org/">glib 2.0</a> (optional)</li>
+<li><a href="http://gtk.org/">GTK+ 3.0</a> (optional)</li>
+<li><a href="http://avahi.org/">Avahi</a> (optional)</li>
+<li><a href="http://jackaudio.org/">jack</a> (optional)</li>
+<li><a href="http://0pointer.de/lennart/projects/libasyncns/">libasyncns</a> (optional)</li>
+<li><a href="ftp://ftp.porcupine.org/pub/security">tcpwrap</a> (optional)</li>
+<li><a href="http://www.lirc.org/">lirc</a> (optional)</li>
+<li><a href="ftp://ftp.gnome.org/pub/GNOME/sources/GConf/|ftp://ftp.gnome.org/pub/GNOME/sources/GConf/">Gconf 2.0</a> (optional as of 0.9.12)</li>
+<li><a href="http://www.freedesktop.org/wiki/Software/dbus">D-Bus</a> (>= 1.4.12, optional)</li>
+<li><a href="http://www.fftw.org/">fftw</a> (>= 3.0, optional as of 1.0, used for the equalizer plugin)</li>
+<li><a href="http://code.entropywave.com/projects/orc/">orc</a> (>= 0.4.9, optional as of 1.0)</li>
+<li><a href="http://www.gnu.org/software/gdbm/">libgdbm</a> (mandatory from 0.9.11 to 0.9.15, optional as of 0.9.16)</li>
+<li><a href="http://tdb.samba.org/">libtdb</a> (optional as of 0.9.16)</li>
+<li><a href="http://check.sourceforge.net/">Check</a> (optional)</li>
+<li><a href="http://www.kernel.org/pub/linux/bluetooth/">sbc</a> (>= 1.0, optional)</li>
+<li><a href="http://www.freedesktop.org/wiki/Software/systemd/">libsystemd-login</a> (optional)</li>
+<li><a href="http://www.freedesktop.org/wiki/Software/systemd/">libsystemd-journal</a> (optional)</li>
+<li><a href="http://www.bluez.org/download/">libbluetooth</a> (>= 4.101, optional)</li>
+</ul>
+
+<h2 id="runtimedependencies">Runtime Dependencies</h2>
+
+<ul>
+<li><a href="http://www.bluez.org/download/">BlueZ</a> (>= 4.99, optional)</li>
+<li><a href="https://01.org/ofono">oFono</a> (>= 1.13, optional)</li>
+<li><a href="http://git.0pointer.de/?p=rtkit.git">RealtimeKit</a> (optional)</li>
+</ul>
+
+</div>
+
+
+
+
+
+</div>
+
+<div id="footer" class="pagefooter">
+
+<div id="pageinfo">
+
+
+
+
+
+
+<div id="backlinks">
+Links:
+
+<a href="../TOC/">TOC</a>
+
+
+</div>
+
+
+
+
+
+
+<div class="pagedate">
+Last edited <span class="date">Fri May  7 02:06:13 2021</span>
+<!-- Created <span class="date">Sat May 18 08:33:51 2013</span> -->
+</div>
+
+</div>
+
+
+<!-- from www -->
+</div>
+
+</div>
+
+</body>
+</html>
