@@ -1,5 +1,6 @@
 # content/ffc/sr/speech_recognition/transcribe_audio.py
 import os
+import sys
 import time
 
 # import assemblyai as aai
@@ -14,7 +15,9 @@ ffcsrAssetsUrl = "content/ffc/sr/assets/"
 
 uploadUrl = 'https://api.assemblyai.com/v2/upload'
 transcriptUrl = 'https://api.assemblyai.com/v2/transcript'
-filename = projectUrl +  ffcsrAssetsUrl + "audio/vincent.wav"
+
+filename = sys.argv[1] if len(sys.argv) > 1 else "vincent.wav"
+filenameURLPrefix = projectUrl +  ffcsrAssetsUrl + "audio/" + filename
 
 headers = {
     "authorization": os.environ.get("API_KEY_ASSEMBLYAI"),
