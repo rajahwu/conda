@@ -1,0 +1,5 @@
+https://www.vim.org/
+https://www.youtube.com/watch?v=JYNA9j8SXs4&t=3572s
+https://github.com/carlhuda/janus/tree/master
+https://vimawesome.com/
+https://github.com/junegunn/vim-plug
