@@ -1,5 +1,5 @@
 #!/bin/bash
-source ./console/vars/colors.sh
+source ../../../../../vars/colors.sh
 
 check_apache2() {
   if sudo service apache2 status > /dev/null; then

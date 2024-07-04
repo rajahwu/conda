@@ -1,5 +1,5 @@
 #!/bin/bash
-source ./console/vars/colors.sh
+source ../../../../vars/colors.sh
 
 # Function to stop apache2
 stop_apache2() {

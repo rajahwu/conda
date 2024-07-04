@@ -1,5 +1,5 @@
 #!/bin/bash
-source ./console/vars/colors.sh
+source ../../../../../vars/colors.sh
 
 check_postgresql() {
   if sudo service postgresql status > /dev/null; then

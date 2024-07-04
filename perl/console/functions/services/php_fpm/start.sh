@@ -1,5 +1,5 @@
 #!/bin/bash
-source ./console/vars/colors.sh
+source ../../../../vars/colors.sh
 
 start_php_fpm() {
   echo -e "${YELLOW}Starting PHP 8.2-FPM...${NC}"

@@ -1,5 +1,5 @@
 #!/bin/bash
-source ./console/vars/colors.sh
+source ../../../../vars/colors.sh
 
 start_postgresql() {
   echo -e "${YELLOW}Starting PostgreSQL...${NC}"

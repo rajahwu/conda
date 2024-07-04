@@ -1,5 +1,5 @@
 #!/bin/bash
-source ./console/vars/colors.sh
+source ../../../../vars/colors.sh
 
 # Function to stop php8.2-fpm
 stop_php_fpm() {

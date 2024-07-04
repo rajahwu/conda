@@ -1,0 +1,1 @@
+net stop Apache2.4\t#powershell
