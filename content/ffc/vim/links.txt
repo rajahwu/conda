@@ -1,5 +1,8 @@
 https://www.vim.org/
+https://vimschool.netlify.app/introduction/vimtutor/
 https://www.youtube.com/watch?v=JYNA9j8SXs4&t=3572s
 https://github.com/carlhuda/janus/tree/master
 https://vimawesome.com/
+https://github.com/junegunn/vim-plughttps://medium.com/@huntie/10-essential-vim-plugins-for-2018-39957190b7a9
 https://github.com/junegunn/vim-plug
+https://dev.to/mr_destructive/vim-terminal-integration-4pfp

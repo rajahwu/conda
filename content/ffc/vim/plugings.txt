@@ -1,0 +1,10 @@
+https://github.com/junegunn/fzf.vim
+https://github.com/itchyny/lightline.vim
+https://github.com/terryma/vim-multiple-cursors
+https://github.com/tpope/vim-eunuch
+https://github.com/tpope/vim-surround
+https://github.com/scrooloose/nerdtree
+https://medium.com/@huntie/10-essential-vim-plugins-for-2018-39957190b7a9
+https://github.com/mattn/emmet-vim
+https://github.com/w0rp/ale
+https://github.com/airblade/vim-gitgutter

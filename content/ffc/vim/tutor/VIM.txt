@@ -1,0 +1,177 @@
+ rajahwu on  /var/www/html/apps/Training/conda  master
+# tree -I 'node_modules'
+.
+├── console
+├── content
+│   ├── __init__.py
+│   ├── ffc
+│   │   ├── sr
+│   │   │   ├── assets
+│   │   │   │   └── audio
+│   │   │   │       ├── arranged-for-flute.mp3
+│   │   │   │       └── vincent.wav
+│   │   │   ├── audio_processing
+│   │   │   │   ├── arranged-for-flute.mp3
+│   │   │   │   ├── load_mp3.py
+│   │   │   │   ├── mashup.mp3
+│   │   │   │   ├── output.wav
+│   │   │   │   ├── plot_audio.py
+│   │   │   │   ├── readme.md
+│   │   │   │   ├── record_mic.py
+│   │   │   │   ├── verify_pyaudio.py
+│   │   │   │   ├── vincent.wav
+│   │   │   │   ├── vincent_new.wav
+│   │   │   │   └── wave_example.py
+│   │   │   ├── links.txt
+│   │   │   ├── speech_recognition
+│   │   │   │   ├── assemvly.example.py
+│   │   │   │   ├── basic.py
+│   │   │   │   ├── fetch_result_sample_short.txt
+│   │   │   │   ├── fetch_transcribe_audio.py
+│   │   │   │   ├── transcribe_audio.py
+│   │   │   │   └── vincent.wav
+│   │   │   └── tmp
+│   │   │       ├── __init__.py
+│   │   │       └── environment.py
+│   │   └── vim
+│   │       ├── TEST
+│   │       ├── assets
+│   │       ├── basic
+│   │       ├── config_paths.txt
+│   │       ├── links.txt
+│   │       ├── readlme.md
+│   │       ├── tmp
+│   │       └── tutor
+│   ├── isaac.py
+│   ├── pyref
+│   │   ├── mpt
+│   │   │   ├── ch02
+│   │   │   └── ch03
+│   │   └── readme.md
+│   ├── sr.py
+│   └── text.txt
+├── editor
+│   └── terminal
+│       └── commands.txt
+├── index.html
+├── index.py
+├── links.txt
+├── perl
+│   └── console
+│       ├── bin
+│       │   ├── dev
+│       │   ├── prod
+│       │   └── services
+│       │       ├── add
+│       │       ├── clean
+│       │       │   └── clean_up_docker.sh
+│       │       ├── remove
+│       │       ├── restart
+│       │       │   └── restart.sh
+│       │       ├── start
+│       │       │   └── start.sh
+│       │       ├── status
+│       │       │   └── status.sh
+│       │       ├── stop
+│       │       │   └── stop.sh
+│       │       └── suspend
+│       ├── docs
+│       │   └── readme.md
+│       ├── functions
+│       │   ├── build
+│       │   └── services
+│       │       ├── apache2
+│       │       │   ├── check.sh
+│       │       │   ├── restart.sh
+│       │       │   ├── start.sh
+│       │       │   └── stop.sh
+│       │       ├── chat
+│       │       ├── dbus
+│       │       ├── docker
+│       │       ├── hostname
+│       │       │   └── check.sh
+│       │       ├── node
+│       │       │   ├── check.sh
+│       │       │   └── start.sh
+│       │       ├── ollama
+│       │       │   └── start.sh
+│       │       ├── owebui
+│       │       │   └── start.sh
+│       │       ├── php_fpm
+│       │       │   ├── check.sh
+│       │       │   ├── restart.sh
+│       │       │   ├── start.sh
+│       │       │   └── stop.sh
+│       │       └── postgresql
+│       │           ├── check.sh
+│       │           ├── restart.sh
+│       │           ├── start.sh
+│       │           └── stop.sh
+│       ├── logs
+│       ├── readme.md
+│       ├── tmp
+│       │   ├── functions.txt
+│       │   └── service_functions.txt
+│       ├── utils
+│       │   ├── make_functions_executable.sh
+│       │   ├── refactor_functions.sh
+│       │   ├── write_functions_to_tmp.sh
+│       │   └── write_service_functions_to_tmp.sh
+│       └── vars
+│           └── colors.sh
+├── pulseaudio.dockerfile
+├── pulseaudio.txt
+├── pypkgs.txt
+├── readme.md
+├── result_sample_short.txt
+├── scripts
+│   ├── fetch_html.sh
+│   ├── list_devices.sh
+│   ├── log_info.sh
+│   ├── logs
+│   │   ├── info_20240629_041111.txt
+│   │   └── info_20240629_041257.txt
+│   ├── python
+│   │   └── list_devices.py
+│   ├── start_pulse_server.sh
+│   └── tmp
+│       └── react-calender.txt
+├── test-mic.wav
+├── tmp
+│   └── bookmarks_7_2_24.html
+└── webapp
+    ├── README.md
+    ├── bun.lockb
+    ├── dist
+    │   ├── assets
+    │   │   ├── index-D3E3i9nO.js
+    │   │   └── index-TV2Co9Nw.css
+    │   ├── index.html
+    │   └── vite.svg
+    ├── index.html
+    ├── package-lock.json
+    ├── package.json
+    ├── public
+    │   └── vite.svg
+    ├── src
+    │   ├── components
+    │   │   ├── Calendar.tsx
+    │   │   ├── Dashboard.tsx
+    │   │   ├── Horoscope.tsx
+    │   │   ├── LotteryNumber.tsx
+    │   │   ├── TodoList.tsx
+    │   │   └── Weather.tsx
+    │   ├── error-page.tsx
+    │   ├── index.css
+    │   ├── main.tsx
+    │   ├── routes
+    │   │   └── root.tsx
+    │   └── vite-env.d.ts
+    ├── tsconfig.app.json
+    ├── tsconfig.json
+    ├── tsconfig.node.json
+    └── vite.config.ts
+
+63 directories, 107 files
+ rajahwu on  /var/www/html/apps/Training/conda  master
+#
