@@ -26,6 +26,7 @@
           </configuration>
         </plugin>
 	<plugin>
+<<<<<<< HEAD
 		<groupId>org.liquibase</groupId>
                    <artifactId>liquibase-maven-plugin</artifactId>
                    <version>4.28.0</version>
@@ -40,6 +41,12 @@
                      </dependency>
                  </dependencies>
 	 </plugin>
+=======
+           <groupId>org.liquibase</groupId>
+           <artifactId>liquibase-maven-plugin</artifactId>
+           <version>4.28.0</version>
+        </plugin>
+>>>>>>> c9df767fcd13e341948aab633b2b6b969cfc231b
       </plugins>
     </pluginManagement>
   </build>
@@ -57,3 +64,7 @@
 	  <module>commons</module>
   </modules>
 </project>
+<<<<<<< HEAD
+=======
+
+>>>>>>> c9df767fcd13e341948aab633b2b6b969cfc231b
