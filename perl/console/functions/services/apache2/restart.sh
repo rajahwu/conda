@@ -1,5 +1,5 @@
 #!/bin/bash
-source ../../../../vars/colors.sh
+source "$(dirname "$0")/../../../vars/colors.sh"
 
 # Function to restart apache2
 restart_apache2() {

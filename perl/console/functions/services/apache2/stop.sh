@@ -1,5 +1,5 @@
 #!/bin/bash
-source ../../../../vars/colors.sh
+source "$(dirname "$0")/../../../vars/colors.sh"
 
 # Function to stop apache2
 stop_apache2() {

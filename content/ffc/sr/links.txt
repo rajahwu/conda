@@ -6,3 +6,8 @@ https://github.com/jiaaro/pydub#installation
 https://matplotlib.org/3.5.3/api/_as_gen/matplotlib.pyplot.html
 https://pypi.org/project/PyAudio/
 https://audacious-media-player.org/
+https://docs.lmms.io/user-manual/3-navigating-lmms/general-interface
+https://pyttsx3.readthedocs.io/en/latest/engine.html
+https://pypi.org/project/gTTS/
+https://itsfoss.com/ascii-art-linux-terminal/
+https://github.com/busyloop/lolcat

@@ -1,5 +1,6 @@
 #!/bin/bash
-source ../../../../../vars/colors.sh
+
+source "$(dirname "$0")/../../../vars/colors.sh"
 
 check_apache2() {
   if sudo service apache2 status > /dev/null; then

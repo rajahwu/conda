@@ -1,5 +1,5 @@
 #!/bin/bash
-source ../../../../../vars/colors.sh
+source "$(dirname "$0")/../../../vars/colors.sh"
 
 check_hostname() {
   local hostname_ip

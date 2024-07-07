@@ -2,9 +2,9 @@
 
 $page = "";
 $page .= "<!DOCTYPE html>";
-$page .= "<html lang="en">";
+$page .= '<html lang="en">';
 $page .= "<head>";
-$page .= "	<meta charset="UTF-8">";
+$page .= '	<meta charset="UTF-8">';
 $page .= "	<title>Home (php)</title>";
 $page .= "</head>";
 $page .= "<body>";

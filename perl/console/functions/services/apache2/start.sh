@@ -1,5 +1,5 @@
 #!/bin/bash
-source /console/vars/colors.sh
+source "$(dirname "$0")/../../../vars/colors.sh"
 
 start_apache2() {
   echo -e "${YELLOW}Starting Apache2...${NC}"

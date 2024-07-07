@@ -1,5 +1,5 @@
 #!/bin/bash
-source ../../../../vars/colors.sh
+source "$(dirname "$0")/../../../vars/colors.sh"
 
 start_php_fpm() {
   echo -e "${YELLOW}Starting PHP 8.2-FPM...${NC}"

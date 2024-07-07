@@ -1,5 +1,5 @@
 #!/bin/bash
-source ../../../../../vars/colors.sh
+source "$(dirname "$0")/../../../vars/colors.sh"
 
 check_php_fpm() {
   if sudo service php8.2-fpm status > /dev/null; then

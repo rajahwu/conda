@@ -10,12 +10,14 @@ source "$script_dir/../../../functions/services/hostname/check.sh"
 source "$script_dir/../../../functions/services/node/check.sh"
 source "$script_dir/../../../functions/services/php_fpm/check.sh"
 source "$script_dir/../../../functions/services/postgresql/check.sh"
+source "$script_dir/../../../functions/services/dbus/check.sh"
 
 # Source start functions
 source "$script_dir/../../../functions/services/apache2/start.sh"
 source "$script_dir/../../../functions/services/node/start.sh"
 source "$script_dir/../../../functions/services/php_fpm/start.sh"
 source "$script_dir/../../../functions/services/postgresql/start.sh"
+source "$script_dir/../../../functions/services/dbus/start.sh"
 
 # Function to check and start services if needed
 check_and_start_service() {
@@ -34,5 +36,7 @@ check_and_start_service check_hostname ""  # No start function needed for hostna
 check_and_start_service check_node_version start_node_version
 check_and_start_service check_php_fpm start_php_fpm
 check_and_start_service check_postgresql start_postgresql
+check_and_start_service check_dbus start_dbus
 
 echo -e "${GREEN}All services checked and started as necessary.${NC}"
+
