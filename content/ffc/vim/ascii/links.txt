@@ -1,0 +1,4 @@
+https://itsfoss.com/ascii-art-linux-terminal/
+https://github.com/busyloop/lolcat
+https://aewan.sourceforge.net/
+https://github.com/cslarsen/jp2a

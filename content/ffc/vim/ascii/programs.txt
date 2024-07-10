@@ -1,0 +1,2 @@
+jp2a --output=ascii.txt --colors input.png
+fortune | cowsay
