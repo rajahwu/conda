@@ -1,0 +1,17 @@
+Vagrant.configure("2") do |config|
+  # Use a Ubuntu 20.04 base box
+  config.vm.box = "ubuntu/focal64"
+
+  # Specify VirtualBox as the provider
+  config.vm.provider "virtualbox" do |vb|
+    vb.memory = "2048"  # Adjust memory size as needed
+    vb.cpus = 2         # Adjust CPU cores as needed
+  end
+
+  # Provisioning script to install Java 11
+  config.vm.provision "shell", inline: <<-SHELL
+    sudo apt-get update
+    sudo apt-get install -y openjdk-11-jdk
+  SHELL
+end
+
